@@ -1,0 +1,414 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<TITLE>Direct Mail subscription Template with Gender</TITLE>
+</head>
+<body>
+
+<!-- ###TEMPLATE_CREATE### begin
+	Form for creation of a new newsletter recipient
+-->
+<form name="tt_address_form" method="post" action="###FORM_URL###">
+
+	###GW2B###
+	<b>Anrede:</b><br>
+	<!--###SUB_REQUIRED_FIELD_tx_dfdirectmailsubscription_gender### begin -->
+	<font color="red"><strong>Angabe erforderlich!</strong></font><br>
+	<!--###SUB_REQUIRED_FIELD_tx_dfdirectmailsubscription_gender### end -->
+	<input name="FE[tt_address][tx_dfdirectmailsubscription_gender]" type="radio" value="1">
+	Herr
+	<input name="FE[tt_address][tx_dfdirectmailsubscription_gender]" type="radio" value="2">
+	Frau
+	<input name="FE[tt_address][tx_dfdirectmailsubscription_gender]" type="radio" value="3">
+	Herr & Frau 
+	<input name="FE[tt_address][tx_dfdirectmailsubscription_gender]" type="radio" value="4">
+	Firma
+	<br><br>
+
+	<b>Name/Firma:</b><br>
+	<!--###SUB_REQUIRED_FIELD_name### begin -->
+	<font color="red"><strong>Angabe erforderlich!</strong></font><br>
+	<!--###SUB_REQUIRED_FIELD_name### end -->
+	<input type="text" name="FE[tt_address][name]">
+	<br><br>
+
+	<b>Email:</b><br>
+	<!--###SUB_REQUIRED_FIELD_email### begin -->
+	<font color="red"><strong>Angabe erforderlich!</strong></font><br>
+	###EVAL_ERROR_FIELD_email###<br>
+	<!--###SUB_REQUIRED_FIELD_email### end-->
+	<input type="text" name="FE[tt_address][email]">
+	<br>
+
+	###CE_CATLIST###
+
+	<br>
+	<b>HTML Emails?</b> (empfohlen)<br>
+	<input type="checkbox" name="FE[tt_address][module_sys_dmail_html]" value=1>
+	<br>
+
+	<input type="submit" name="whatever" value="Anmelden">
+	<input type="submit" name="whatever" value="Abbrechen" onClick="document.forms[0].action='###BACK_URL###';">
+	###HIDDENFIELDS###
+</form>
+<br>
+<a href="###FORM_URL###&cmd=infomail&backURL=###FORM_URL_ENC###">� Profil bearbeiten</a><br>  
+###GW2E###
+<!-- ###TEMPLATE_CREATE### end-->
+
+<!-- ###TEMPLATE_CREATE_SAVED### begin
+	This is the code shown when a new newsletter recipient is created.
+	You can use the newly created record as markers on the format ###FIELD_[fieldname]###
+-->
+
+###GW1B###Wir haben Ihre Anmeldung erhalten!###GW1E###<br>
+<br>
+###GW2B###Unsere Bestaetigung wurde soeben an <strong>###FIELD_email###</strong> versendet!<br>
+Bitte bestaetigen Sie die darin enthaltenden Aktivierung. <strong></P>
+<p>
+BITTE BEACHTEN SIE, DASS IHR NEWSLETTER-ABONNEMENT ZUM SCHUTZ GEGEN MISSBRAUCH ERST MIT ANKLICKEN DES LINKS IN DER FOLGENDEN EMAIL AKTIVIERT WIRD!</p>
+<p>PLEASE NOTICE THAT YOUR SUBSCRIPTION IS NOT ACTIVE UNTIL YOU'VE CLICKED A LINK IN THAT EMAIL! ###GW2E###</p>
+<!-- ###TEMPLATE_CREATE_SAVED### end-->
+
+
+<br>
+<br>
+<br>
+<br>
+</p>
+<hr><br><br><br>
+<em>This is the form used to edit the existing users.</em>
+<br>
+<br>
+
+<!-- ###TEMPLATE_EDIT### begin
+	This is the form used to edit the existing users.
+	The form works with non-logged in users based on email-verification	
+-->
+<form name="tt_address_form" method="post" action="###FORM_URL###">
+	###GW1B###Profil bearbeiten###GW1E###<br>
+	<br>
+	###GW2B###
+
+	<!-- ###SUB_REQUIRED_FIELDS_WARNING### begin 
+		This is a general warning about incorrectly filled in fields.
+	-->
+	<B>Einige Felder wurden nicht richtig ausgefuellt!</B><br>
+	<br>
+	<!-- ###SUB_REQUIRED_FIELDS_WARNING### end -->
+
+	<b>Anrede:</b><br>
+	<!--###SUB_REQUIRED_FIELD_tx_dfdirectmailsubscription_gender### begin -->
+	<font color="red"><strong>Angabe erforderlich!</strong></font><br>
+	<!--###SUB_REQUIRED_FIELD_tx_dfdirectmailsubscription_gender### end -->
+	<input name="FE[tt_address][tx_dfdirectmailsubscription_gender]" type="radio" value="1">
+	Herr
+	<input name="FE[tt_address][tx_dfdirectmailsubscription_gender]" type="radio" value="2">
+	Frau
+	<input name="FE[tt_address][tx_dfdirectmailsubscription_gender]" type="radio" value="3">
+	Herr & Frau 
+	<input name="FE[tt_address][tx_dfdirectmailsubscription_gender]" type="radio" value="4">
+	Firma
+	<br><br>
+
+	<b>Name/Firma:</b><br>
+	<!--###SUB_REQUIRED_FIELD_name### begin
+		This is shown only if the form is submitted and the field is configured to be "required" and at the same time not filled in.
+		The syntax is of the comment 'name' is: 	SUB_REQUIRED_FIELD_[enter-the-field-name-here]
+	-->
+	<font color="red"><strong>Angabe erforderlich!</strong></font><br>
+	<!--###SUB_REQUIRED_FIELD_name### end -->
+	<input type="text" name="FE[tt_address][name]">
+	<br>
+	<br>
+	<b>Email:</b><br>
+	<!--###SUB_REQUIRED_FIELD_email### begin
+		Same as above...
+		EVAL_ERROR_FIELD_email is in addition an error message defined in TypoScript in case an email address does not verify to be of correct syntax.
+	-->
+	<font color="red"><strong>Angabe erforderlich!</strong></font><br>
+	###EVAL_ERROR_FIELD_email###<br>
+	<!--###SUB_REQUIRED_FIELD_email### end-->
+	<input type="text" name="FE[tt_address][email]">
+	<br>
+	<br>
+	<b>Kategorieauswahl:</b><br>
+	###CE_CATLIST###
+	<br>
+	<b>Newsletter als HTML Mail empfangen:</b> <em>empfohlen</em><br>
+	<input type="checkbox" name="FE[tt_address][module_sys_dmail_html]" value=1>
+	<br>
+	###HIDDENFIELDS###
+	<input type="Submit" name="whatever" value="�ndern">
+</form>
+<br><br>
+Klicken Sie hier zum <a href="###FORM_URL###&rU=###REC_UID###&aC=###AUTH_CODE###&cmd=delete"><strong>loeschen (!)</strong></a> Ihres Profiels!
+###GW2E###
+<br>
+<!-- ###TEMPLATE_EDIT### end-->
+
+
+<br><br><br><br><hr><br><br><br>
+<em>	This is displayed when a user has updated his profile:</em>
+<br>
+<br>
+
+
+<!-- ###TEMPLATE_EDIT_SAVED### begin
+	This is displayed when a user has updated his profile:
+	You can use the newly updated record as markers on the format ###FIELD_[fieldname]###
+-->
+
+###GW1B###Ihr Profil wurde geaendert..###GW1E###<br>
+<br>
+###GW2B###
+
+<br>
+Die geaenderten Angaben:<br>
+Name: ###FIELD_name###<br>
+Email: ###FIELD_email###<br>
+<br>
+
+<a href="###FORM_URL###&cmd=edit&rU=###FIELD_uid###&aC=###AUTH_CODE###">Profil nochmals aendern..</a>
+###GW2E###
+<!-- ###TEMPLATE_EDIT_SAVED### end-->
+
+
+<br><br><br><br><hr><br><br><br>
+<em>This form is used to send the infomails.</em>
+<br>
+<br>
+
+<!-- ###TEMPLATE_INFOMAIL### begin
+	This form is used to send the infomails.
+	You could also use this as a "did you forget your password?" service form.
+-->
+###GW1B###Moechten Sie Ihr Profil bearbeiten?###GW1E###<br>
+<br>
+###GW2B###
+Geben Sie die E-Mailadresse ein:<br>
+Wichtig: Verwenden Sie bitte die gleiche E-Mailadresse, die Sie bei Ihrer Anmeldung angegeben haben.<br><br> 
+Ein Link zur Bearbeitung Ihres Profils wird versendet an:<br>
+
+<form name="tt_address_form" method="post" action="###FORM_URL###">
+	<input type="text" name="fetch"><br>
+	<input type="submit" name="whatever" value="Senden">
+	###HIDDENFIELDS###
+</form>
+###GW2E###
+<!-- ###TEMPLATE_INFOMAIL### end-->
+
+
+<br><br><br><br><hr><br><br><br>
+<em>This template is the response page when a users has requested his password send to his email.</em>
+<br>
+<br>
+
+<!-- ###TEMPLATE_INFOMAIL_SENT### begin
+	This template is the response page when a users has requested his password send to his email.
+-->
+###GW1B###Eine E-Mail  wurde soeben mit den erforderlichen Informationen an Sie versendet.. ###GW1E###<br>
+<br>
+###GW2B###
+
+<a href="###BACK_URL###"><strong>Zur�ck</strong></a><br>
+###GW2E###
+
+<!-- ###TEMPLATE_INFOMAIL_SENT### end-->
+
+
+<br><br><br><br><hr><br><br><br>
+<em>This template is the response page when a users has delete his subscription.</em>
+<br>
+<br>
+
+<!-- ###TEMPLATE_DELETE_SAVED### begin
+	This is the message displayed if you have just deleted your subscription
+-->
+###GW1B###Ihre Abmeldung wurde soeben bestaetigt!###GW1E###<br>
+<br>
+###GW2B###
+
+Name: ###FIELD_name###<br>
+Email: ###FIELD_email###<br>
+
+###GW2E###
+<!-- ###TEMPLATE_DELETE_SAVED### end-->
+
+<br>
+<br>
+<h2>'Setfixed' templates:</h2>
+
+
+<br><br><br><br><hr><br><br><br>
+<em>This template is the response page when a users has clicked a setfixed link.</em>
+<br>
+<br>
+<!-- ###TEMPLATE_SETFIXED_OK### begin
+	This is the message displayed if you have just deleted your subscription
+-->
+###GW1B###Ihre Anmeldung wurde soeben bestaetigt..###GW1E###<br>
+<br>
+###GW2B###
+
+Name: ###FIELD_name###<br>
+Email: ###FIELD_email###<br>
+
+###GW2E###
+<!-- ###TEMPLATE_SETFIXED_OK### end-->
+
+
+<br><br><br><br><hr><br><br><br>
+<em>This template is the response page when a users has clicked a setfixed link.</em>
+<br>
+<br>
+<!-- ###TEMPLATE_SETFIXED_OK_DELETE### begin
+	This is the message displayed if you have just deleted your subscription
+-->
+###GW1B###Ihr Profil wurde soeben geloescht!###GW1E###<br>
+<br>
+###GW2B###
+Name: ###FIELD_name###<br>
+Email: ###FIELD_email###<br>
+###GW2E###
+<!-- ###TEMPLATE_SETFIXED_OK_DELETE### end-->
+
+
+<br><br><br><br><hr><br><br><br>
+<em>This template is the response page when a users has clicked a setfixed link.</em>
+<br>
+<br>
+<!-- ###TEMPLATE_SETFIXED_FAILED### begin
+	This is the message displayed if you have just deleted your subscription
+-->
+
+###GW1B###Eine oder mehrere Angaben zur Anmeldung waren fehlerhaft!###GW1E###<br>
+<br>
+###GW2B###
+Moeglicherweise wurde Ihr Profil bereits geloescht..
+###GW2E###
+<!-- ###TEMPLATE_SETFIXED_FAILED### end-->
+
+
+<br>
+<br><br><br><hr><br><br><br>
+<em>Authentication failed message.</em>
+<br>
+<br>
+
+<!-- ###TEMPLATE_AUTH### begin
+	Authentication failed message
+-->
+###GW1B###Authentisierung fehlerhaft!###GW1E###<br>
+<br>
+###GW2B###
+Aus irgendeinem Grund schlug die Authentisierung fehl. Bitte wenden Sie sich an den Systemadministrator.###GW2E###
+<!-- ###TEMPLATE_AUTH### end-->
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<H1>EMAIL TEMPLATES:</H1>
+In these plain text email templates the first line with content is used as subject in the mails.<br>
+
+<br><br><br><br><hr><br><br><br>
+<em>This template is used to notify a person by email that he is subscribed to the newsletter.<br>
+You can use the newly created record as markers on the format ###FIELD_[fieldname]###
+</em>
+<br>
+<br>
+
+
+<pre>
+<!-- ###EMAIL_TEMPLATE_CREATE_SAVED### begin
+	This template is used to notify a person by email that he is subscribed to the newsletter.
+	You can use the newly created record as markers on the format ###FIELD_[fieldname]###
+-->
+<!--###SUB_RECORD###-->
+Newsletter: Ihre Anmeldung
+
+Vielen Dank fuer das Interesse an unserem Newsletter!
+
+BITTE BEACHTEN SIE,
+DASS IHR NEWSLETTER-ABONNEMENT ZUM SCHUTZ GEGEN MISSBRAUCH ERST AKTIVIERT WERDEN MUSS!
+
+Abonnement aktivieren:
+###THIS_URL######FORM_URL###&1=1###SYS_SETFIXED_approve###
+
+Anmeldung ablehnen (Profil loeschen):
+###THIS_URL######FORM_URL######SYS_SETFIXED_DELETE###
+
+Profil bearbeiten:
+###THIS_URL######FORM_URL###&cmd=edit&aC=###SYS_AUTHCODE###&rU=###FIELD_uid###
+
+<!--###SUB_RECORD###-->
+<!-- ###EMAIL_TEMPLATE_CREATE_SAVED### end-->
+</pre>
+<br><br><br><br><hr><br><br><br>
+<em>This is the template used for the administrator notifycation email upon a new subscription.<br>
+You can use the newly created record as markers on the format ###FIELD_[fieldname]###
+</em>
+<br>
+<br>
+
+
+<pre>
+<!-- ###EMAIL_TEMPLATE_CREATE_SAVED-ADMIN### begin
+ 	This is the template used for the administrator notifycation email upon a new subscription.
+	You can use the newly created record as markers on the format ###FIELD_[fieldname]###
+-->
+<!--###SUB_RECORD###-->
+Admin: Neue Anmeldung zum Newsletter
+
+
+Name: ###FIELD_name###
+Email: ###FIELD_email###<br>
+<!--###SUB_RECORD###-->
+<!-- ###EMAIL_TEMPLATE_CREATE_SAVED-ADMIN### end-->
+</pre>
+
+
+<br><br><br><br><hr><br><br><br>
+<em>The template for forgotten passwords (infomail 'FORGOTPASSWORD' template!)</em>
+<br>
+<br>
+<pre>
+<!-- ###EMAIL_TEMPLATE_FORGOTPASSWORD### begin
+	The template for forgotten passwords (infomail 'FORGOTPASSWORD' template!)
+-->
+<!--###SUB_RECORD###-->
+Newsletter: Zur �nderung Ihres Profils
+
+Sie moechten Ihr Profil bearbeiten:
+###THIS_URL######FORM_URL###&cmd=edit&aC=###SYS_AUTHCODE###&rU=###FIELD_uid###
+
+Sie moechten Ihr PROFIL L�SCHEN!:
+###THIS_URL######FORM_URL###&cmd=delete&aC=###SYS_AUTHCODE###&rU=###FIELD_uid###
+<!--###SUB_RECORD###-->
+<!-- ###EMAIL_TEMPLATE_FORGOTPASSWORD### end-->
+</pre>
+
+
+<br><br><br><br><hr><br><br><br>
+<em>Template used if the infomail was empty!</em>
+<br>
+<br>
+<pre>
+<!-- ###EMAIL_TEMPLATE_NORECORD### begin
+	Template used if the infomail was empty!
+-->
+Kein Eintrag gefunden!
+
+Ihr Profil ist in unserem System nicht bekannt.
+
+<!-- ###EMAIL_TEMPLATE_NORECORD### end-->
+</pre>
+
+</body>
+</html>
