@@ -40,42 +40,5 @@
 		<languageKey index="tr" type="array">
 			<label index="pi_dmail_subscr">Doğrudan Mail abonmanı</label>
 		</languageKey>
-		<languageKey index="se"></languageKey>
-		<languageKey index="pt"></languageKey>
-		<languageKey index="ru"></languageKey>
-		<languageKey index="ro"></languageKey>
-		<languageKey index="ch"></languageKey>
-		<languageKey index="sk"></languageKey>
-		<languageKey index="lt"></languageKey>
-		<languageKey index="is"></languageKey>
-		<languageKey index="hr"></languageKey>
-		<languageKey index="hu"></languageKey>
-		<languageKey index="gl"></languageKey>
-		<languageKey index="th"></languageKey>
-		<languageKey index="gr"></languageKey>
-		<languageKey index="hk"></languageKey>
-		<languageKey index="eu"></languageKey>
-		<languageKey index="bg"></languageKey>
-		<languageKey index="br"></languageKey>
-		<languageKey index="et"></languageKey>
-		<languageKey index="ar"></languageKey>
-		<languageKey index="he"></languageKey>
-		<languageKey index="ua"></languageKey>
-		<languageKey index="lv"></languageKey>
-		<languageKey index="jp"></languageKey>
-		<languageKey index="vn"></languageKey>
-		<languageKey index="ca"></languageKey>
-		<languageKey index="ba"></languageKey>
-		<languageKey index="kr"></languageKey>
-		<languageKey index="eo"></languageKey>
-		<languageKey index="my"></languageKey>
-		<languageKey index="hi"></languageKey>
-		<languageKey index="fo"></languageKey>
-		<languageKey index="fa"></languageKey>
-		<languageKey index="sr"></languageKey>
 	</data>
-	<orig_hash type="array">
-	</orig_hash>
-	<orig_text type="array">
-	</orig_text>
 </T3locallang>

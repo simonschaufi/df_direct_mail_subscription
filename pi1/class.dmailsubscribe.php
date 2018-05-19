@@ -20,7 +20,7 @@ class user_dmailsubscribe {
 	public function __construct() {
 		$this->cObj = t3lib_div::makeInstance('tslib_cObj');
 	}
-	
+
 	/**
 	 * Create direct_mail categories related checkboxes
 	 * @param	string	$content: HTML
@@ -91,4 +91,3 @@ class user_dmailsubscribe {
 if (defined("TYPO3_MODE") && $TYPO3_CONF_VARS[TYPO3_MODE]["XCLASS"]["ext/df_direct_mail_subscription/pi1/class.dmailsubscribe.php"]) {
 	include_once($TYPO3_CONF_VARS[TYPO3_MODE]["XCLASS"]["ext/df_direct_mail_subscription/pi1/class.dmailsubscribe.php"]);
 }
-?>

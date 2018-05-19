@@ -23,38 +23,36 @@
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
-class Tx_DfDirectMailSubscription_Hook_MailMarkersHook {
+class Tx_DfDirectMailSubscription_Hook_MailMarkersHook
+{
 
-	/**
-	 * @param array $params
-	 * @param dmailer $pObj
-	 */
-	public function replaceMailMarkers($params, dmailer $pObj) {
-		/** @var $LANG language */
-		global $LANG;
+    /**
+     * @param array $params
+     * @param dmailer $pObj
+     */
+    public function replaceMailMarkers($params, dmailer $pObj)
+    {
+        /** @var $LANG language */
+        global $LANG;
 
-		$LANG->includeLLFile('EXT:df_direct_mail_subscription/pi1/locallang.xml');
+        $LANG->includeLLFile('EXT:df_direct_mail_subscription/pi1/locallang.xml');
 
-		$tempMarkers = &$params['markers'];
-		if ($params['row']['tx_dfdirectmailsubscription_gender'] == '3') {
-			$tempMarkers['###USER_tx_gender###'] = $LANG->getLL('dmail_gender_mfale');
-			$tempMarkers['###USER_TX_GENDER###'] = strtoupper($LANG->getLL('dmail_gender_mfale'));
-		}
-		elseif ($params['row']['tx_dfdirectmailsubscription_gender'] == "1" || $params['row']['gender'] == '0') {
-			$tempMarkers['###USER_tx_gender###'] = $LANG->getLL('dmail_gender_male');
-			$tempMarkers['###USER_TX_GENDER###'] = strtoupper($LANG->getLL('dmail_gender_male'));
-		}
-		elseif ($params['row']['tx_dfdirectmailsubscription_gender'] == "2" || $params['row']['gender'] == '1') {
-			$tempMarkers['###USER_tx_gender###'] = $LANG->getLL('dmail_gender_fmale');
-			$tempMarkers['###USER_TX_GENDER###'] = strtoupper($LANG->getLL('dmail_gender_fmale'));
-		}
-		elseif ($params['row']['tx_dfdirectmailsubscription_gender'] == '0') {
-			$tempMarkers['###USER_tx_gender###'] = $LANG->getLL('dmail_gender_all');
-			$tempMarkers['###USER_TX_GENDER###'] = strtoupper($LANG->getLL('dmail_gender_all'));
+        $tempMarkers = &$params['markers'];
+        if ($params['row']['tx_dfdirectmailsubscription_gender'] == '3') {
+            $tempMarkers['###USER_tx_gender###'] = $LANG->getLL('dmail_gender_mfale');
+            $tempMarkers['###USER_TX_GENDER###'] = strtoupper($LANG->getLL('dmail_gender_mfale'));
+        } elseif ($params['row']['tx_dfdirectmailsubscription_gender'] == "1" || $params['row']['gender'] == '0') {
+            $tempMarkers['###USER_tx_gender###'] = $LANG->getLL('dmail_gender_male');
+            $tempMarkers['###USER_TX_GENDER###'] = strtoupper($LANG->getLL('dmail_gender_male'));
+        } elseif ($params['row']['tx_dfdirectmailsubscription_gender'] == "2" || $params['row']['gender'] == '1') {
+            $tempMarkers['###USER_tx_gender###'] = $LANG->getLL('dmail_gender_fmale');
+            $tempMarkers['###USER_TX_GENDER###'] = strtoupper($LANG->getLL('dmail_gender_fmale'));
+        } elseif ($params['row']['tx_dfdirectmailsubscription_gender'] == '0') {
+            $tempMarkers['###USER_tx_gender###'] = $LANG->getLL('dmail_gender_all');
+            $tempMarkers['###USER_TX_GENDER###'] = strtoupper($LANG->getLL('dmail_gender_all'));
 
-			$tempMarkers['###USER_name###'] = '';
-			$tempMarkers['###USER_NAME###'] = '';
-		}
-	}
+            $tempMarkers['###USER_name###'] = '';
+            $tempMarkers['###USER_NAME###'] = '';
+        }
+    }
 }
-?>
